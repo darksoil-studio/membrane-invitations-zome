@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as i,a2 as o}from"./chunks/framework.D-nMrMRy.js";const u=JSON.parse('{"title":"Setup","description":"","frontmatter":{},"headers":[],"relativePath":"setup.md","filePath":"setup.md"}'),s={name:"setup.md"};function n(l,e,r,d,p,h){return i(),a("div",null,e[0]||(e[0]=[o("",9)]))}const m=t(s,[["render",n]]);export{u as __pageData,m as default};

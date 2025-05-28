@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MembraneInvitationsEvent"],"fn":["attempt_commit_awaiting_deps_entries","commit_my_pending_encrypted_messages","query_membrane_invitations_events","recv_remote_signal","send_events","send_invitation"],"struct":["SendInvitationInput"]};
