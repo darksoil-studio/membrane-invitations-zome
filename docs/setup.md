@@ -17,16 +17,6 @@ This will do the following:
 
 That's it! You have now integrated the `membrane_invitations` coordinator and integrity zomes and their UI into your app!
 
-Now, [choose which elements you need](/elements/membrane-invitations-context.md) and import them like this:
-
-```js
-import "@darksoil-studio/membrane-invitations-zome/dist/elements/membrane-invitations-context.js";
-```
-
-And then they are ready be used just like any other HTML tag. 
-
-> [!NOTE]
-> Importing the elements from the UI package will define them in the global `CustomElementsRegistry`, which makes them available to be used like any normal HTML tag. You can read more about custom elements [here](https://darksoil.studio/tnesh-stack/guides/custom-elements).
 
 # Example
 
