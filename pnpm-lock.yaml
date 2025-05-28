@@ -52,13 +52,13 @@ importers:
         version: link:../ui
       '@darksoil-studio/profiles-zome':
         specifier: 0.500.0-rev.b211bab52e30e8730c0878e121b9649680976907
-        version: 0.500.0-rev.b211bab52e30e8730c0878e121b9649680976907(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
+        version: 0.500.0-rev.b211bab52e30e8730c0878e121b9649680976907(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       '@holochain/client':
         specifier: ^0.19.0
         version: 0.19.0
       '@shoelace-style/shoelace':
         specifier: ^2.11.0
-        version: 2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
+        version: 2.20.1(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       api-viewer-element:
         specifier: ^1.0.0-pre.10
         version: 1.0.0-pre.10
@@ -73,10 +73,10 @@ importers:
         version: 11.6.0
       vitepress:
         specifier: ^1.0.1
-        version: 1.6.3(@algolia/client-search@5.25.0)(@types/react@18.3.23)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)
+        version: 1.6.3(@algolia/client-search@5.25.0)(@types/react@19.1.6)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)
       vitepress-plugin-mermaid:
         specifier: ^2.0.16
-        version: 2.0.17(mermaid@11.6.0)(vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@18.3.23)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3))
+        version: 2.0.17(mermaid@11.6.0)(vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@19.1.6)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3))
 
   tests:
     dependencies:
@@ -90,7 +90,7 @@ importers:
         specifier: ^0.19.0
         version: 0.19.0
       '@holochain/tryorama':
-        specifier: ^0.18.0
+        specifier: ^0.18.2
         version: 0.18.2
       '@msgpack/msgpack':
         specifier: ^2.8.0
@@ -113,6 +113,9 @@ importers:
       '@darksoil-studio/holochain-utils':
         specifier: ^0.500.0
         version: 0.500.0
+      '@darksoil-studio/private-event-sourcing-zome':
+        specifier: 0.500.0-rev.b4aae52d1b584fd6a50704663b3486552a3e98a7
+        version: 0.500.0-rev.b4aae52d1b584fd6a50704663b3486552a3e98a7(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       '@darksoil-studio/profiles-provider':
         specifier: ^0.500.0
         version: 0.500.1(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
@@ -366,6 +369,9 @@ packages:
 
   '@darksoil-studio/linked-devices-zome@0.500.0-rev.5a9b78aed28fcc3a2cfcb62441440301ab9b80fb':
     resolution: {integrity: sha512-kvEQdzvH0ZfhB4MPLni0JMi9lkwPS62IPCxjfXJarVudUNa4zpoSqMcsdaG7zdiVhxjXlNrEi3VPJVINsJkw5Q==}
+
+  '@darksoil-studio/private-event-sourcing-zome@0.500.0-rev.b4aae52d1b584fd6a50704663b3486552a3e98a7':
+    resolution: {integrity: sha512-t6v9l/pWN1gWeSbB1aH021HR7sj7NqcuG/y8VBALlOJUONddOXPyIO6nzfZdNGRApAAh5GmFI/bckcNxnpMhEw==}
 
   '@darksoil-studio/profiles-provider@0.500.1':
     resolution: {integrity: sha512-8iOCR5fY8xgY7xQoyxa2XG5OGNWUrPMaJtKZGjEbpdX+7Agef5tLswFei18l9FfjbU+C53Hb/0itUV/klF1yaw==}
@@ -1114,12 +1120,6 @@ packages:
 
   '@types/mdurl@2.0.0':
     resolution: {integrity: sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==}
-
-  '@types/prop-types@15.7.14':
-    resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
-
-  '@types/react@18.3.23':
-    resolution: {integrity: sha512-/LDXMQh55EzZQ0uVAZmKKhfENivEvWz6E+EYzh+/MCjMhNsotd+ZHhBGIjFDTi6+fz0OhQQQLbTgdQIxxCsC0w==}
 
   '@types/react@19.1.6':
     resolution: {integrity: sha512-JeG0rEWak0N6Itr6QUx+X60uQmN+5t3j9r/OVDtWzFXKaj6kD1BwJzOksD0FF6iWxZlbE1kB0q9vtnU2ekqa1Q==}
@@ -3195,24 +3195,6 @@ snapshots:
       enabled: 2.0.0
       kuler: 2.0.0
 
-  '@darksoil-studio/holochain-elements@0.500.0(@floating-ui/utils@0.2.9)(@types/react@18.3.23)':
-    dependencies:
-      '@darksoil-studio/holochain-signals': 0.500.0
-      '@darksoil-studio/holochain-utils': 0.500.0
-      '@holo-host/identicon': 0.1.0
-      '@holochain/client': 0.19.0
-      '@lit-labs/router': 0.1.4
-      '@lit/context': 1.1.5
-      '@lit/localize': 0.12.2
-      '@mdi/js': 7.4.47
-      '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      lit: 3.3.0
-    transitivePeerDependencies:
-      - '@floating-ui/utils'
-      - '@types/react'
-      - bufferutil
-      - utf-8-validate
-
   '@darksoil-studio/holochain-elements@0.500.0(@floating-ui/utils@0.2.9)(@types/react@19.1.6)':
     dependencies:
       '@darksoil-studio/holochain-signals': 0.500.0
@@ -3257,26 +3239,6 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@darksoil-studio/linked-devices-zome@0.500.0-rev.5a9b78aed28fcc3a2cfcb62441440301ab9b80fb(@floating-ui/utils@0.2.9)(@types/react@18.3.23)':
-    dependencies:
-      '@darksoil-studio/holochain-elements': 0.500.0(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      '@darksoil-studio/holochain-signals': 0.500.0
-      '@darksoil-studio/holochain-utils': 0.500.0
-      '@holochain/client': 0.19.0
-      '@lit/context': 1.1.5
-      '@lit/localize': 0.12.2
-      '@mdi/js': 7.4.47
-      '@msgpack/msgpack': 2.8.0
-      '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      '@tauri-apps/plugin-barcode-scanner': 2.2.0
-      js-base64: 3.7.7
-      lit: 3.3.0
-    transitivePeerDependencies:
-      - '@floating-ui/utils'
-      - '@types/react'
-      - bufferutil
-      - utf-8-validate
-
   '@darksoil-studio/linked-devices-zome@0.500.0-rev.5a9b78aed28fcc3a2cfcb62441440301ab9b80fb(@floating-ui/utils@0.2.9)(@types/react@19.1.6)':
     dependencies:
       '@darksoil-studio/holochain-elements': 0.500.0(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
@@ -3297,17 +3259,18 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@darksoil-studio/profiles-provider@0.500.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)':
+  '@darksoil-studio/private-event-sourcing-zome@0.500.0-rev.b4aae52d1b584fd6a50704663b3486552a3e98a7(@floating-ui/utils@0.2.9)(@types/react@19.1.6)':
     dependencies:
-      '@darksoil-studio/holochain-elements': 0.500.0(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
+      '@darksoil-studio/holochain-elements': 0.500.0(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       '@darksoil-studio/holochain-signals': 0.500.0
       '@darksoil-studio/holochain-utils': 0.500.0
+      '@darksoil-studio/linked-devices-zome': 0.500.0-rev.5a9b78aed28fcc3a2cfcb62441440301ab9b80fb(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       '@holochain/client': 0.19.0
       '@lit/context': 1.1.5
       '@lit/localize': 0.12.2
       '@mdi/js': 7.4.47
       '@msgpack/msgpack': 2.8.0
-      '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
+      '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
       lit: 3.3.0
     transitivePeerDependencies:
       - '@floating-ui/utils'
@@ -3326,26 +3289,6 @@ snapshots:
       '@mdi/js': 7.4.47
       '@msgpack/msgpack': 2.8.0
       '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@19.1.6)
-      lit: 3.3.0
-    transitivePeerDependencies:
-      - '@floating-ui/utils'
-      - '@types/react'
-      - bufferutil
-      - utf-8-validate
-
-  '@darksoil-studio/profiles-zome@0.500.0-rev.b211bab52e30e8730c0878e121b9649680976907(@floating-ui/utils@0.2.9)(@types/react@18.3.23)':
-    dependencies:
-      '@darksoil-studio/holochain-elements': 0.500.0(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      '@darksoil-studio/holochain-signals': 0.500.0
-      '@darksoil-studio/holochain-utils': 0.500.0
-      '@darksoil-studio/linked-devices-zome': 0.500.0-rev.5a9b78aed28fcc3a2cfcb62441440301ab9b80fb(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      '@darksoil-studio/profiles-provider': 0.500.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
-      '@holochain/client': 0.19.0
-      '@lit/context': 1.1.5
-      '@lit/localize': 0.12.2
-      '@mdi/js': 7.4.47
-      '@msgpack/msgpack': 2.8.0
-      '@shoelace-style/shoelace': 2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)
       lit: 3.3.0
     transitivePeerDependencies:
       - '@floating-ui/utils'
@@ -3375,9 +3318,9 @@ snapshots:
 
   '@docsearch/css@3.8.2': {}
 
-  '@docsearch/js@3.8.2(@algolia/client-search@5.25.0)(@types/react@18.3.23)(search-insights@2.17.3)':
+  '@docsearch/js@3.8.2(@algolia/client-search@5.25.0)(@types/react@19.1.6)(search-insights@2.17.3)':
     dependencies:
-      '@docsearch/react': 3.8.2(@algolia/client-search@5.25.0)(@types/react@18.3.23)(search-insights@2.17.3)
+      '@docsearch/react': 3.8.2(@algolia/client-search@5.25.0)(@types/react@19.1.6)(search-insights@2.17.3)
       preact: 10.26.7
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -3386,14 +3329,14 @@ snapshots:
       - react-dom
       - search-insights
 
-  '@docsearch/react@3.8.2(@algolia/client-search@5.25.0)(@types/react@18.3.23)(search-insights@2.17.3)':
+  '@docsearch/react@3.8.2(@algolia/client-search@5.25.0)(@types/react@19.1.6)(search-insights@2.17.3)':
     dependencies:
       '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@5.25.0)(algoliasearch@5.25.0)(search-insights@2.17.3)
       '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@5.25.0)(algoliasearch@5.25.0)
       '@docsearch/css': 3.8.2
       algoliasearch: 5.25.0
     optionalDependencies:
-      '@types/react': 18.3.23
+      '@types/react': 19.1.6
       search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -3706,10 +3649,6 @@ snapshots:
     dependencies:
       lit: 3.3.0
 
-  '@lit/react@1.0.7(@types/react@18.3.23)':
-    dependencies:
-      '@types/react': 18.3.23
-
   '@lit/react@1.0.7(@types/react@19.1.6)':
     dependencies:
       '@types/react': 19.1.6
@@ -3862,20 +3801,6 @@ snapshots:
   '@shoelace-style/animations@1.2.0': {}
 
   '@shoelace-style/localize@3.2.1': {}
-
-  '@shoelace-style/shoelace@2.20.1(@floating-ui/utils@0.2.9)(@types/react@18.3.23)':
-    dependencies:
-      '@ctrl/tinycolor': 4.1.0
-      '@floating-ui/dom': 1.7.0
-      '@lit/react': 1.0.7(@types/react@18.3.23)
-      '@shoelace-style/animations': 1.2.0
-      '@shoelace-style/localize': 3.2.1
-      composed-offset-position: 0.0.6(@floating-ui/utils@0.2.9)
-      lit: 3.3.0
-      qr-creator: 1.0.0
-    transitivePeerDependencies:
-      - '@floating-ui/utils'
-      - '@types/react'
 
   '@shoelace-style/shoelace@2.20.1(@floating-ui/utils@0.2.9)(@types/react@19.1.6)':
     dependencies:
@@ -4058,13 +3983,6 @@ snapshots:
       '@types/unist': 3.0.3
 
   '@types/mdurl@2.0.0': {}
-
-  '@types/prop-types@15.7.14': {}
-
-  '@types/react@18.3.23':
-    dependencies:
-      '@types/prop-types': 15.7.14
-      csstype: 3.1.3
 
   '@types/react@19.1.6':
     dependencies:
@@ -5819,17 +5737,17 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitepress-plugin-mermaid@2.0.17(mermaid@11.6.0)(vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@18.3.23)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)):
+  vitepress-plugin-mermaid@2.0.17(mermaid@11.6.0)(vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@19.1.6)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)):
     dependencies:
       mermaid: 11.6.0
-      vitepress: 1.6.3(@algolia/client-search@5.25.0)(@types/react@18.3.23)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)
+      vitepress: 1.6.3(@algolia/client-search@5.25.0)(@types/react@19.1.6)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3)
     optionalDependencies:
       '@mermaid-js/mermaid-mindmap': 9.3.0
 
-  vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@18.3.23)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3):
+  vitepress@1.6.3(@algolia/client-search@5.25.0)(@types/react@19.1.6)(postcss@8.5.3)(search-insights@2.17.3)(typescript@5.8.3):
     dependencies:
       '@docsearch/css': 3.8.2
-      '@docsearch/js': 3.8.2(@algolia/client-search@5.25.0)(@types/react@18.3.23)(search-insights@2.17.3)
+      '@docsearch/js': 3.8.2(@algolia/client-search@5.25.0)(@types/react@19.1.6)(search-insights@2.17.3)
       '@iconify-json/simple-icons': 1.2.36
       '@shikijs/core': 2.5.0
       '@shikijs/transformers': 2.5.0

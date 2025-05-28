@@ -13,3 +13,5 @@ hdk = { workspace = true }
 serde = { workspace = true }
 
 membrane_invitations_integrity = { path = "../../integrity/membrane_invitations", package = "membrane_invitations_integrity" }
+
+private_event_sourcing = { git = "https://github.com/darksoil-studio/private-event-sourcing-zome", branch = "main-0.5" } 
