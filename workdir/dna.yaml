@@ -1,0 +1,27 @@
+---
+manifest_version: "1"
+name: membrane_invitations_test
+integrity:
+  network_seed: ~
+  properties: ~
+  zomes:
+    - name: membrane_invitations_integrity
+      hash: ~
+      bundled: "../target/wasm32-unknown-unknown/release/membrane_invitations_integrity.wasm"
+      dependencies: ~    
+    - name: profiles_integrity
+      hash: ~
+      bundled: <NIX PACKAGE>
+      dependencies: ~
+coordinator:
+  zomes:
+    - name: membrane_invitations
+      hash: ~
+      bundled: "../target/wasm32-unknown-unknown/release/membrane_invitations.wasm"
+      dependencies:
+        - name: membrane_invitations_integrity    
+    - name: profiles
+      hash: ~
+      bundled: <NIX PACKAGE>
+      dependencies:
+        - name: profiles_integrity
