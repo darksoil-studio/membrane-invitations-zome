@@ -1,0 +1,333 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "locales/locales.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "sourceLocale",
+          "default": "`en`",
+          "description": "The locale code that templates in this source code are written in."
+        },
+        {
+          "kind": "variable",
+          "name": "targetLocales",
+          "type": {
+            "text": "array"
+          },
+          "default": "[ , ]",
+          "description": "The other locale codes that this application is localized into. Sorted\nlexicographically."
+        },
+        {
+          "kind": "variable",
+          "name": "allLocales",
+          "type": {
+            "text": "array"
+          },
+          "default": "[ `en`, ]",
+          "description": "All valid project locale codes. Sorted lexicographically."
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "sourceLocale",
+          "declaration": {
+            "name": "sourceLocale",
+            "module": "locales/locales.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "targetLocales",
+          "declaration": {
+            "name": "targetLocales",
+            "module": "locales/locales.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "allLocales",
+          "declaration": {
+            "name": "allLocales",
+            "module": "locales/locales.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/context.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "membraneInvitationsStoreContext"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "membraneInvitationsStoreContext",
+          "declaration": {
+            "name": "membraneInvitationsStoreContext",
+            "module": "src/context.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./membrane-invitations-store.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./membrane-invitations-client.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./context.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./types.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/membrane-invitations-client.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MembraneInvitationsClient",
+          "members": [
+            {
+              "kind": "method",
+              "name": "sendInvitation",
+              "return": {
+                "type": {
+                  "text": "Promise<EntryHash>"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "recipients",
+                  "type": {
+                    "text": "AgentPubKey[]"
+                  }
+                },
+                {
+                  "name": "role_name_to_clone",
+                  "type": {
+                    "text": "string"
+                  }
+                },
+                {
+                  "name": "dna_modifiers",
+                  "type": {
+                    "text": "DnaModifiers"
+                  }
+                },
+                {
+                  "name": "membrane_proof",
+                  "type": {
+                    "text": "MembraneProof | undefined"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "PrivateEventSourcingClient",
+            "package": "@darksoil-studio/private-event-sourcing-zome"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MembraneInvitationsClient",
+          "declaration": {
+            "name": "MembraneInvitationsClient",
+            "module": "src/membrane-invitations-client.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/membrane-invitations-store.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MembraneInvitationsStore",
+          "superclass": {
+            "name": "PrivateEventSourcingStore",
+            "package": "@darksoil-studio/private-event-sourcing-zome"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MembraneInvitationsStore",
+          "declaration": {
+            "name": "MembraneInvitationsStore",
+            "module": "src/membrane-invitations-store.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/mocks.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MembraneInvitationsZomeMock",
+          "superclass": {
+            "name": "ZomeMock",
+            "package": "@darksoil-studio/holochain-utils"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MembraneInvitationsZomeMock",
+          "declaration": {
+            "name": "MembraneInvitationsZomeMock",
+            "module": "src/mocks.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/types.ts",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/elements/membrane-invitations-context.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MembraneInvitationsContext",
+          "members": [
+            {
+              "kind": "field",
+              "name": "client",
+              "type": {
+                "text": "AppClient"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "store",
+              "type": {
+                "text": "MembraneInvitationsStore"
+              },
+              "attribute": "store"
+            },
+            {
+              "kind": "field",
+              "name": "role",
+              "type": {
+                "text": "string"
+              },
+              "attribute": "role"
+            },
+            {
+              "kind": "field",
+              "name": "zome",
+              "type": {
+                "text": "string"
+              },
+              "default": "'membrane_invitations'",
+              "attribute": "zome"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "store",
+              "type": {
+                "text": "MembraneInvitationsStore"
+              },
+              "fieldName": "store"
+            },
+            {
+              "name": "role",
+              "type": {
+                "text": "string"
+              },
+              "fieldName": "role"
+            },
+            {
+              "name": "zome",
+              "type": {
+                "text": "string"
+              },
+              "default": "'membrane_invitations'",
+              "fieldName": "zome"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "membrane-invitations-context",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MembraneInvitationsContext",
+          "declaration": {
+            "name": "MembraneInvitationsContext",
+            "module": "src/elements/membrane-invitations-context.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "membrane-invitations-context",
+          "declaration": {
+            "name": "MembraneInvitationsContext",
+            "module": "src/elements/membrane-invitations-context.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
