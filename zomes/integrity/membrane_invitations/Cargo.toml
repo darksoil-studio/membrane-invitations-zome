@@ -10,6 +10,7 @@ name = "membrane_invitations_integrity"
 [dependencies]
 hdi = { workspace = true }
 
+holochain_serialized_bytes = { workspace = true }
 serde = { workspace = true }
 
 private_event_sourcing_integrity = { git = "https://github.com/darksoil-studio/private-event-sourcing-zome", branch = "main-0.5" } 
