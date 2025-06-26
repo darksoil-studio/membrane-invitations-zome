@@ -10,6 +10,7 @@ name = "membrane_invitations"
 [dependencies]
 hdk = { workspace = true }
 
+holochain_serialized_bytes = { workspace = true }
 serde = { workspace = true }
 
 membrane_invitations_integrity = { path = "../../integrity/membrane_invitations", package = "membrane_invitations_integrity" }
